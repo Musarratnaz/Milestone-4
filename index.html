@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable Resume</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <strong>Milestone-04-Editable Resume Builder</strong>
+    </div>
+    <div class="main">
+      <form id="resumeForm">
+        <div class="personal"><strong>Personal Information</strong></div>
+        <label class="inputname" id="upload" for="picture"><strong>Upload Picture:</strong></label>
+        <input
+          class="forpic"
+          type="file"
+          id="picture"
+          name="picture"
+          accept="image/*"
+          required
+        /><br /><br />
+
+        <label class="inputname" for="name"><strong>Name:</strong></label>
+        <input type="text" id="name" name="name" required style="margin-left: 70px;" /><br /><br />
+
+        <label class="inputname" for="phone"><strong>Phone Number:</strong></label>
+        <input type="tel" id="phone" name="phone" required /><br /><br />
+
+        <label class="inputname" for="email"><strong>Email:</strong></label>
+        <input type="email" id="email" name="email" required style="margin-left: 70px;"/><br /><br />
+
+        <label class="inputname" for="address"><strong>Address:</strong></label>
+        <textarea id="address" name="address" required style="margin-left: 70px;">
+        </textarea><br /><br />
+
+        <div class="personal"><strong>Skills</strong></div>
+        <input type="text" contenteditable="true" id="skills" name="skills" required/><br />
+        <div id="additionalSkills">
+        </div><br />
+
+        <div class="personal"><strong>Education</strong></div>
+        <textarea id="education" contenteditable="true" name="education" required></textarea><br />
+        <div id="additionalEducation"></div>
+        <br />
+
+        <div class="personal"><strong>Experience</strong></div>
+        <textarea id="experience" contenteditable="true" name="experience" required></textarea><br />
+        <div id="additionalExperience"></div>
+        <br />
+      </form>
+      <button id="generateBtn" class="inputname" type="submit">
+        Generate Resume
+      </button>
+    </div>
+
+    <h1>
+      After creating a resume, you can add additional Skills, Education, and Experience by clicking the Button and filling out the relevant sections.
+    </h1>
+    <div id="generatedResume"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
